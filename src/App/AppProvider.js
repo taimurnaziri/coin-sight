@@ -9,18 +9,19 @@ export class AppProvider extends React.Component{
 			page: 'dashboard',
 			...this.savedSettings(),
 			setPage: this.setPage,
-			confirmedFavorites: this.confirmedFavorites
+			confirmFavorites: this.confirmFavorites
 		}
 	}
 
-	confirmedFavorites = () => {
-		this.setState({
-			firstVisit: false,
-			page: 'dashboard'
-		});
-		localStorage.setItem('coinSight', JSON.stringify({
-			test: 'hello'
-		}));
+	confirmFavorites = () => {
+		// this.setState({
+		// 	firstVisit: false,
+		// 	page: 'dashboard'
+		// });
+		// localStorage.setItem('coinSight', JSON.stringify({
+		// 	test: 'hello'
+		// }));
+		console.log('hello');
 	}
 
 	savedSettings(){
@@ -28,7 +29,7 @@ export class AppProvider extends React.Component{
 		if(!coinSightData){
 			return {page: 'settings', firstVisit: true}
 		}
-		return {page: 'settings'}
+		return {page: 'settings'};
 	}
 
 	setPage = page => this.setState({page})

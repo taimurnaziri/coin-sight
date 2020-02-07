@@ -10,5 +10,5 @@ export default function ({firstVisit}){
 				</div> : null
 			}
 		</AppContext.Consumer>
-	)
-}
+	);
+};

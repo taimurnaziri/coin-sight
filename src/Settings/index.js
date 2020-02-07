@@ -4,5 +4,10 @@ import ConfirmButton from './ConfirmButton';
 
 
 export default function(){
-	return <div> <WelcomeMessage/> <ConfirmButton/> </div>
+	return (
+		<div> 
+			<WelcomeMessage/> 
+			<ConfirmButton/> 
+		</div>
+	)
 }
